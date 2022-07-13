@@ -1,7 +1,5 @@
-import 'package:bmi_calculator/screens/detailspage.dart';
 import 'package:bmi_calculator/screens/homepage.dart';
 import 'package:flutter/material.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -15,13 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        '/homepage': (context) => HomePage(),
-        '/detailspage': (context) => DetailsPage(),
+        '/homepage': (context) => const HomePage(),
+        
       },
       title: 'Body Mass Index Calculator',
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

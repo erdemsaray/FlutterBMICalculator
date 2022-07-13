@@ -1,6 +1,8 @@
-//gender and age variables are not yet considered in this section. functions can be developed if operations are desired according to these variables.
+// ignore_for_file: file_names
+
 class CalculateManager {
-  int calculateBMI(int height, int weight, int age) {
+  // ignore: non_constant_identifier_names
+  int CalculateBMI(int height, int weight, int age) {
     int bodyMassIndex = 0;
 
     height = height * height;

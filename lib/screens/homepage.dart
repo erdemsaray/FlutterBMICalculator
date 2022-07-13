@@ -1,8 +1,9 @@
+import 'package:bmi_calculator/screens/detailspage.dart';
 import 'package:bmi_calculator/utils/calculateManager.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -11,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   Color cardBackgroundColor = const Color.fromARGB(255, 18, 58, 91);
   ButtonStyle elevatedButtonStyle = ButtonStyle(
-      backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 18, 58, 91)),
+      backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 18, 58, 91)),
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(18.0),
       )),
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.male,
                                     color: Colors.blue,
                                     size: 100,
@@ -67,16 +68,16 @@ class _HomePageState extends State<HomePage> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Text(
+                                      const Text(
                                         "Male",
                                         textAlign: TextAlign.right,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10,
                                       ),
                                       Visibility(
                                         visible: !genderValue,
-                                        child: Icon(
+                                        child: const Icon(
                                           Icons.check,
                                           size: 20,
                                         ),
@@ -89,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Expanded(
@@ -106,17 +107,17 @@ class _HomePageState extends State<HomePage> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Icon(Icons.female, size: 100, color: Colors.pink),
+                                const Icon(Icons.female, size: 100, color: Colors.pink),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text("Female"),
-                                    SizedBox(
+                                    const Text("Female"),
+                                    const SizedBox(
                                       width: 10,
                                     ),
                                     Visibility(
                                       visible: genderValue,
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.check,
                                         size: 20,
                                       ),
@@ -153,7 +154,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                       Text(
                                         "$valueHeight",
-                                        style: TextStyle(fontSize: 25),
+                                        style: const TextStyle(fontSize: 25),
                                       ),
                                       Slider(
                                           value: valueHeight.toDouble(),
@@ -187,13 +188,13 @@ class _HomePageState extends State<HomePage> {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text(
+                                    const Text(
                                       "AGE",
                                       style: TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
                                     ),
                                     Text(
                                       "$valueAge",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontSize: 40,
                                       ),
                                     ),
@@ -201,22 +202,22 @@ class _HomePageState extends State<HomePage> {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
                                         ElevatedButton(
-                                          child: Icon(Icons.remove),
+                                          child: const Icon(Icons.remove),
                                           onPressed: () {
                                             setState(() {
                                               valueAge--;
                                             });
                                           },
-                                          style: ElevatedButton.styleFrom(shape: CircleBorder()),
+                                          style: ElevatedButton.styleFrom(shape: const CircleBorder()),
                                         ),
                                         ElevatedButton(
-                                          child: Icon(Icons.add),
+                                          child: const Icon(Icons.add),
                                           onPressed: () {
                                             setState(() {
                                               valueAge++;
                                             });
                                           },
-                                          style: ElevatedButton.styleFrom(shape: CircleBorder()),
+                                          style: ElevatedButton.styleFrom(shape: const CircleBorder()),
                                         )
                                       ],
                                     )
@@ -225,7 +226,7 @@ class _HomePageState extends State<HomePage> {
                                 height: 160,
                               )),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Expanded(
@@ -239,13 +240,13 @@ class _HomePageState extends State<HomePage> {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text(
+                                    const Text(
                                       "WEIGHT",
                                       style: TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
                                     ),
                                     Text(
                                       "$valueWeight",
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontSize: 40,
                                       ),
                                     ),
@@ -253,22 +254,22 @@ class _HomePageState extends State<HomePage> {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
                                         ElevatedButton(
-                                          child: Icon(Icons.remove),
+                                          child: const Icon(Icons.remove),
                                           onPressed: () {
                                             setState(() {
                                               valueWeight--;
                                             });
                                           },
-                                          style: ElevatedButton.styleFrom(shape: CircleBorder()),
+                                          style: ElevatedButton.styleFrom(shape: const CircleBorder()),
                                         ),
                                         ElevatedButton(
-                                          child: Icon(Icons.add),
+                                          child: const Icon(Icons.add),
                                           onPressed: () {
                                             setState(() {
                                               valueWeight++;
                                             });
                                           },
-                                          style: ElevatedButton.styleFrom(shape: CircleBorder()),
+                                          style: ElevatedButton.styleFrom(shape: const CircleBorder()),
                                         )
                                       ],
                                     )
@@ -281,17 +282,22 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 10, bottom: 10),
+                    padding: const EdgeInsets.only(top: 10, bottom: 10),
                     child: Row(
                       children: [
                         Expanded(
                           child: ElevatedButton(
                             onPressed: () {
-                              int bodyMassIndex = CalculateManager().calculateBMI(valueHeight, valueWeight, valueAge);
+                              int bodyMassIndex = CalculateManager().CalculateBMI(valueHeight, valueWeight, valueAge);
                               String result = CalculateManager().evaluateBMIResult(bodyMassIndex);
-                              String comment = CalculateManager().getComment(bodyMassIndex);
-
-                              print("BMI: $bodyMassIndex, Result: $result, Comment: $comment ");
+                              String comment = CalculateManager().getComment(bodyMassIndex); 
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      DetailsPage(bmi: bodyMassIndex, comment: comment, result: result),
+                                ),
+                              );
                             },
                             child: const SizedBox(
                               child: Center(
