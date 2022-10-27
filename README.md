@@ -2,7 +2,7 @@
 
 This project is a flutter application where the user can calculate the body mass index.
 
-<h3 align="left">Screnshots</h3>
+<h3 align="left">Screenshots</h3>
 <p align="left"> 
 <a> 
    <img src="screenshots/gif1.gif" alt="Screenshot1" height="600em"/> 
