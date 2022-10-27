@@ -30,7 +30,7 @@ class CalculateManager {
     if (bodyMassIndex >= 25) {
       return "You have a higher than normal bodyweight.";
     } else if (bodyMassIndex >= 18.5) {
-      return "You have a normal bodyweight. Good job!";
+      return "You have ideal body mass index. It's very good for you!";
     } else {
       return "You have a lower than normal bodyweight. Try to eat more.";
     }
